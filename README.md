@@ -10,7 +10,7 @@
 Create an account and post blogs about your favorite tech.
 
 # Installation
-Deployed to Heroku. https://sheltered-anchorage-12238.herokuapp.com/
+Deployed to Github pages. https://jakech617.github.io/tech-blog/
 
 # License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
