@@ -12,7 +12,7 @@
 Create an account and post blogs about your favorite tech.
 
 # Installation
-Deployed to Github pages. https://jakech617.github.io/tech-blog/
+Deployed to Heroku. https://hidden-wildwood-63984.herokuapp.com/
 
 # License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
