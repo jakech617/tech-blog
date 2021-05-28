@@ -24,6 +24,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/post/:id', async (req, res) => {
+  console.log('1234456412512341243');
   try {
     const postData = await Post.findByPk(req.params.id, {
       include: [
@@ -35,7 +36,7 @@ router.get('/post/:id', async (req, res) => {
     });
 
     const post = postData.get({ plain: true });
-
+    console.log("post", post);
     res.render('post', {
       ...post,
       logged_in: req.session.logged_in
@@ -70,6 +71,15 @@ router.get('/login', (req, res) => {
   }
 
   res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/dashboard');
+    return;
+  }
+
+  res.render('dashboard');
 });
 
 module.exports = router;

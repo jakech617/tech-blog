@@ -45,9 +45,9 @@ router.get('/:id', (req, res) => {
 
 router.post('/', auth, (req, res) => {
   Comment.create({
-    comment_text: req.body.comment_text,
     user_id: req.session.user_id,
-    post_id: req.body.post_id,
+    comment_text: req.body.comment_text,
+    post_id: req.body.post_id
   })
     .then((CommentData) => {
       res.json(CommentData);
@@ -56,6 +56,7 @@ router.post('/', auth, (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+    console.log(req.body.comment_text);
 });
 
 router.delete('/:id', auth, (req, res) => {
